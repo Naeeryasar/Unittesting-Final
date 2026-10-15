@@ -22,3 +22,7 @@ class TestStringProcessor(unittest.TestCase):
         self.assertEqual(main.count_words("I Love Bhoot A Lot."), 5)
         self.assertNotEqual(main.count_words("This is a test sentence."), 6)
         self.assertIsInstance(main.count_words("Hello world"), int)
+
+
+if __name__ == '__main__':
+    unittest.main()
