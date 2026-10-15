@@ -15,3 +15,10 @@ class TestStringProcessor(unittest.TestCase):
         self.assertRaises(TypeError, main.count_vowels, None)
         self.assertNotEqual(main.count_vowels("Python"), 3)
         self.assertEqual(main.count_vowels("This is a test sentence."), 7)
+
+    def test_count_words(self):
+        self.assertEqual(main.count_words("Python is great"), 3)
+        self.assertEqual(main.count_words(""), 0)
+        self.assertEqual(main.count_words("I Love Bhoot A Lot."), 5)
+        self.assertNotEqual(main.count_words("This is a test sentence."), 6)
+        self.assertIsInstance(main.count_words("Hello world"), int)
